@@ -1,0 +1,8 @@
+.background-image{
+	background-image: url("map_latinAmerica.jpg");
+	height: 700px;
+	background-repeat: no-repeat;
+	width: 50%;
+	float: left;
+}
+
