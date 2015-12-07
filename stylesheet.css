@@ -4,5 +4,10 @@
 	background-repeat: no-repeat;
 	width: 50%;
 	float: left;
+	display: none;
 }
 
+
+.questions{
+	display: none;
+}
