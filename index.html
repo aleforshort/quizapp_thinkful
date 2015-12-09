@@ -5,8 +5,8 @@
 	<title>LATAM Quiz APP</title>
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<script src="app.js"></script>
 	<script src="jquery2.js"></script>
+	<script src="app.js"></script>
 </head>
 <body>
 
@@ -21,9 +21,26 @@
 <section class="background-image">
 
 </section>
+<section class="hidden" id="questiontemplate">
+	<h2></h2>
 
+	<input type="radio" name="option" class="option" value="0"> 
+	<span class="answer"></span>
+	<br>
+
+	<input type="radio" name="option" class="option" value="1"> 
+	<span class="answer"></span>
+	<br>
+	<input type="radio" name="option" class="option" value="2"> 
+	<span class="answer"></span>
+	<br>
+	<input type="radio" name="option" class="option" value="3"> 
+	<span class="answer"></span>
+	<br>
+	<button class="submit">Submit</button>
+</section>
 <section class="questions" id="question1">
-	<h2>How many countries make up Latin America?</h2>
+	<!-- <h2>How many countries make up Latin America?</h2>
 
 	<input type="radio" name="option" class="option" value="0"> 
 	<span class="answer">28</span>
@@ -38,11 +55,11 @@
 	<input type="radio" name="option" class="option" value="3"> 
 	<span class="answer">30</span>
 	<br>
-	<button class="submit">Submit</button>
+	<button class="submit">Submit</button> -->
 </section>
 
 <section class="questions" id="question2">
-	<h2>What is the largest country in South America?</h2>
+	<!-- <h2>What is the largest country in South America?</h2>
 	<input type="radio" name="option" class="option" value="0"> 
 	<span class="answer">Argentina</span>
 	<br>
@@ -55,10 +72,10 @@
 	<input type="radio" name="option" class="option" value="3"> 
 	<span class="answer">Brazil</span>
 	<br>
-	<button class="submit">Submit</button>
+	<button class="submit">Submit</button> -->
 </section>
 <section class="questions" id="question3">
-	<h2>What are the colors of the Brazilian flag?</h2>
+<!-- 	<h2>What are the colors of the Brazilian flag?</h2>
 	<input type="radio" name="option" class="option" value="0"> 
 	<span class="answer">red, blue, white</span>
 	<br>
@@ -71,10 +88,10 @@
 	<input type="radio" name="option" class="option" value="3"> 
 	<span class="answer">white, purple, green, yellow</span>
 	<br>
-	<button class="submit">Submit</button>
+	<button class="submit">Submit</button> -->
 </section>
 <section class="questions" id="question4">
-	<h2>Which LATAM country has won the Miss Universe Beauty Pageant the most?</h2>
+	<!-- <h2>Which LATAM country has won the Miss Universe Beauty Pageant the most?</h2>
 	<input type="radio" name="option" class="option" value="0"> 
 	<span class="answer">Puerto Rico</span>
 	<br>
@@ -87,17 +104,16 @@
 	<input type="radio" name="option" class="option" value="3"> 
 	<span class="answer">Mexico</span>
 	<br>
-	<button class="submit">Submit</button>
+	<button class="submit">Submit</button> -->
 </section>
 
 <section class="feedback">
 
-<ul class="ulfeedback">
-</ul>
 
 </section>
 
-
+<div id="Q">
+</div>
 
 
 

@@ -1,31 +1,41 @@
 $(document).ready(function() {
-	$(".background-image").hide();
-	$(".questions").hide();
-	$("#introduction").show();
 
-})
+var currentquestion = 0;
+
 //start game here.
 
 $(".startquiz").click(function(){
-	// startgame()
+	console.log("buttonclicked");
 	$(".background-image").show();
 	$("#introduction").hide();
-
+	startgame();
 });
 
 //these are the var for the correct answers to the questions.
 
-var rightanswers ={
-	question_1 = "23",
-	question_2 = "Brazil",
-	question_3 = "green, yellow, blue",
-	question_4 = "Venezuela"
-};
+
+var quizqa = [
+ {
+ 	"questiontext": "How many countries make up Latin America?",
+ 	"answertext": ["28","23","29","30"],
+ 	"correctanswer": 1
+ }
+
+]
 
 //here is the function that evaluates the user submisson.
 
 function startgame (){
-	$("#question1").show(); 
+	// $("#question1").show(); 
+
+	var currentquestiondata = quizqa[currentquestion];
+	console.log(currentquestiondata.questiontext);
+	var currenttemplate = $("#questiontemplate").clone();
+	currenttemplate.removeClass();
+	currenttemplate.find("h2").text(currentquestiondata.questiontext);
+	currenttemplate.find("span").text(currentquestiondata.answertext);
+
+	$("#Q").append(currenttemplate);	
 }
 
 	$("submit").click(function(){
@@ -37,11 +47,10 @@ function startgame (){
 		else{
 			$(".feeback").text("Your answer is incorrect!");
 		}
-
 });
 
 
-
+});
 
 
 
