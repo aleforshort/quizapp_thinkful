@@ -33,7 +33,7 @@ function startgame (){
 	var currenttemplate = $("#questiontemplate").clone();
 	currenttemplate.removeClass();
 	currenttemplate.find("h2").text(currentquestiondata.questiontext);
-	currenttemplate.find("span").text(currentquestiondata.answertext);
+	// currenttemplate.find("span").text(currentquestiondata.answertext);
 	var answerTextContainers = currenttemplate.find("span.answer");
 	for (quizqa.answertext = 0; quizqa.answertext <=3; quizqa.answertext++){
 		answerTextContainers[quizqa.answertext].text(currentquestiondata.answertext[quizqa.answer]);
