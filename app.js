@@ -36,7 +36,7 @@ function startgame (){
 	// currenttemplate.find("span").text(currentquestiondata.answertext);
 	var answerTextContainers = currenttemplate.find("span.answer");
 	for (quizqa.answertext = 0; quizqa.answertext <=3; quizqa.answertext++){
-		answerTextContainers[quizqa.answertext].text(currentquestiondata.answertext[quizqa.answer]);
+		answerTextContainers[quizqa.answertext].text(currentquestiondata.answertext[quizqa.answertext]);
 	}
 // 	for (var currentquestiondata.answertext = 0; currentquestiondata.answertext < 4; currentquestiondata.answertext++) {
 //    $("span").text(currentquestiondata.answertext);
