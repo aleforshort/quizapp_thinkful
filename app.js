@@ -29,18 +29,14 @@ function startgame (){
 	// $("#question1").show(); 
 
 	var currentquestiondata = quizqa[currentquestion];
-	console.log(currentquestiondata.questiontex	t);
+	console.log(currentquestiondata.questiontext);
 	var currenttemplate = $("#questiontemplate").clone();
 	currenttemplate.removeClass();
 	currenttemplate.find("h2").text(currentquestiondata.questiontext);
-	// currenttemplate.find("span").text(currentquestiondata.answertext);
 	var answerTextContainers = currenttemplate.find("span.answer");
-	for (quizqa.answertext = 0; quizqa.answertext <=3; quizqa.answertext++){
-		answerTextContainers[quizqa.answertext].text(currentquestiondata.answertext[quizqa.answertext]);
+	for (var i = 0; i < currentquestiondata.answertext.length; i++){
+		$(answerTextContainers[i]).text(currentquestiondata.answertext[i]);
 	}
-// 	for (var currentquestiondata.answertext = 0; currentquestiondata.answertext < 4; currentquestiondata.answertext++) {
-//    $("span").text(currentquestiondata.answertext);
-// }
 
 
 	$("#Q").append(currenttemplate);	
