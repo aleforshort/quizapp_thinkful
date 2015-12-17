@@ -54,6 +54,8 @@ function displayQuestion (){
 	}
 	})
 
+	
+
 	$("#Q").append(currenttemplate);	
 }
 
