@@ -46,15 +46,16 @@ function displayQuestion (){
 	var useranswer = $("input.option").val();
 	if(useranswer == currentquestiondata.correctanswer){
 		feedbackanswer.text("Your answer in correct!");
+		feedbackanswer.append("<button class='continue'>Continue</button>");
 	}
 	else{
-		feedbackanswer.text("Your answer in incorrect!");
+		feedbackanswer.text("Your answer in incorrect!")
+		feedbackanswer.append("<button class='continue'>Continue</button>");
 	}
 	})
 
 	$("#Q").append(currenttemplate);	
 }
-
 
 
 });
