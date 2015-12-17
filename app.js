@@ -49,12 +49,10 @@ function displayQuestion (){
 		feedbackanswer.append("<button class='continue'>Continue</button>");
 	}
 	else{
-		feedbackanswer.text("Your answer in incorrect!")
+		feedbackanswer.text("Your answer in incorrect!");
 		feedbackanswer.append("<button class='continue'>Continue</button>");
 	}
 	})
-
-	
 
 	$("#Q").append(currenttemplate);	
 }
