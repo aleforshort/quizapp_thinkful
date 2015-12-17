@@ -43,7 +43,8 @@ function startgame (){
 	
 	$(".submit").click(function(){
 	var feedbackanswer = currenttemplate.find("h2.feedback");
-	if("input.option" == currentquestiondata.correctanswer){
+	var useranswer = $("input.option").val();
+	if(useranswer == currentquestiondata.correctanswer){
 		feedbackanswer.text("Your answer in correct!");
 	}
 	else{
