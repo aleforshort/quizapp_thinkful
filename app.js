@@ -8,7 +8,7 @@ $(".startquiz").click(function(){
 	console.log("buttonclicked");
 	$(".background-image").show();
 	$("#introduction").hide();
-	startgame();
+	displayQuestion();
 });
 
 //these are the var for the correct answers to the questions.
@@ -29,7 +29,7 @@ var quizqa = [
 
 //here is the function that evaluates the user submisson.
 
-function startgame (){
+function displayQuestion (){
 
 	var currentquestiondata = quizqa[currentquestion];
 	console.log(currentquestiondata.questiontext);
@@ -54,6 +54,7 @@ function startgame (){
 
 	$("#Q").append(currenttemplate);	
 }
+
 
 
 });
