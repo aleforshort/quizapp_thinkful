@@ -18,7 +18,11 @@ var quizqa = [
  {
  	"questiontext": "How many countries make up Latin America?",
  	"answertext": ["28","23","29","30"],
- 	"correctanswer": 1
+ 	"correctanswer": 1,
+ 	"questiontext2": "What is the largest country in South America?",
+ 	"answertext2": ["Argentina","Colombia","Venezuela","Brazil"],
+ 	"correctanswer2":3
+
  }
 
 ]
@@ -26,7 +30,6 @@ var quizqa = [
 //here is the function that evaluates the user submisson.
 
 function startgame (){
-	// $("#question1").show(); 
 
 	var currentquestiondata = quizqa[currentquestion];
 	console.log(currentquestiondata.questiontext);
@@ -37,7 +40,13 @@ function startgame (){
 	for (var i = 0; i < currentquestiondata.answertext.length; i++){
 		$(answerTextContainers[i]).text(currentquestiondata.answertext[i]);
 	}
-
+	var feedbackanswer = currenttemplate.find("h2.feedback");
+	if(currentquestiondata.answertext == currentquestiondata.correctanswer){
+		feedbackanswerdiv.text("Your answer in correct!");
+	}
+	else{
+		feedbackanswerdiv.text("Your answer in incorrect!");
+	}
 
 	$("#Q").append(currenttemplate);	
 }
