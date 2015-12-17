@@ -40,26 +40,22 @@ function startgame (){
 	for (var i = 0; i < currentquestiondata.answertext.length; i++){
 		$(answerTextContainers[i]).text(currentquestiondata.answertext[i]);
 	}
+	
+	$("submit").click(function(){
 	var feedbackanswer = currenttemplate.find("h2.feedback");
+
 	if(currentquestiondata.answertext == currentquestiondata.correctanswer){
-		feedbackanswerdiv.text("Your answer in correct!");
+		feedbackanswer.text("Your answer in correct!");
 	}
 	else{
-		feedbackanswerdiv.text("Your answer in incorrect!");
+		feedbackanswer.text("Your answer in incorrect!");
 	}
+	})
 
 	$("#Q").append(currenttemplate);	
 }
 
-	$("submit").click(function(){
-		if(".input" == question_1){
 
-		$(".feeback").text("Your answer is correct!");		
-		}
-
-		else{
-			$(".feeback").text("Your answer is incorrect!");
-		}
 });
 
 
