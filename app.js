@@ -35,7 +35,7 @@ function startgame (){
 	console.log(currentquestiondata.questiontext);
 	var currenttemplate = $("#questiontemplate").clone();
 	currenttemplate.removeClass();
-	currenttemplate.find("h2").text(currentquestiondata.questiontext);
+	currenttemplate.find("h2.QA").text(currentquestiondata.questiontext);
 	var answerTextContainers = currenttemplate.find("span.answer");
 	for (var i = 0; i < currentquestiondata.answertext.length; i++){
 		$(answerTextContainers[i]).text(currentquestiondata.answertext[i]);
