@@ -41,7 +41,7 @@ function startgame (){
 		$(answerTextContainers[i]).text(currentquestiondata.answertext[i]);
 	}
 	
-	$("submit").click(function(){
+	$(".submit").click(function(){
 	var feedbackanswer = currenttemplate.find("h2.feedback");
 	if(currentquestiondata.answertext == currentquestiondata.correctanswer){
 		feedbackanswer.text("Your answer in correct!");
