@@ -18,11 +18,11 @@ var quizqa = [
  {
  	"questiontext": "How many countries make up Latin America?",
  	"answertext": ["28","23","29","30"],
- 	"correctanswer": 1,
- 	"questiontext2": "What is the largest country in South America?",
- 	"answertext2": ["Argentina","Colombia","Venezuela","Brazil"],
- 	"correctanswer2":3
-
+ 	"correctanswer": 1},
+ 	{
+ 	"questiontext": "What is the largest country in South America?",
+ 	"answertext": ["Argentina","Colombia","Venezuela","Brazil"],
+ 	"correctanswer":3
  }
 
 ]
@@ -30,7 +30,7 @@ var quizqa = [
 //here is the function that evaluates the user submisson.
 
 function displayQuestion (){
-
+	$("#Q").html("");	
 	var currentquestiondata = quizqa[currentquestion];
 	console.log(currentquestiondata.questiontext);
 	var currenttemplate = $("#questiontemplate").clone();
@@ -39,11 +39,18 @@ function displayQuestion (){
 	var answerTextContainers = currenttemplate.find("span.answer");
 	for (var i = 0; i < currentquestiondata.answertext.length; i++){
 		$(answerTextContainers[i]).text(currentquestiondata.answertext[i]);
-	}
-	
-	$(".submit").click(function(){
-	var feedbackanswer = currenttemplate.find("h2.feedback");
-	var useranswer = $("input.option").val();
+	}	
+
+	$("#Q").append(currenttemplate);	
+}
+
+//event delegation bind the click even to the Q div. 
+
+	$("#Q").on("click",".submit",function(){
+	var feedbackanswer = $("#Q").find("h2.feedback");
+	var useranswer = $("input.option:checked").val();
+	console.log(useranswer);
+	var currentquestiondata = quizqa[currentquestion];
 	if(useranswer == currentquestiondata.correctanswer){
 		feedbackanswer.text("Your answer in correct!");
 		feedbackanswer.append("<button class='continue'>Continue</button>");
@@ -54,9 +61,18 @@ function displayQuestion (){
 	}
 	})
 
-	$("#Q").append(currenttemplate);	
-}
+	$("#Q").on("click",".continue",function(){
+	var arraylength = quizqa.length-1;	
+	if (currentquestion < arraylength){
+		currentquestion++;
+		displayQuestion();	
+	}
+	else{
+		alert("You have reached the end of the quiz!");
+	}
 
+
+})
 
 });
 
